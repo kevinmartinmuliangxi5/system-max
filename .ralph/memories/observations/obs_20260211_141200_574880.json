@@ -1,0 +1,17 @@
+{
+  "id": "obs_20260211_141200_574880",
+  "timestamp": "2026-02-11T14:12:00.574880",
+  "session_id": "sess_20260211_141200",
+  "observation": {
+    "type": "decision",
+    "content": "使用临时Token而非新密码直接发送",
+    "context": {
+      "alternatives": [
+        "临时Token",
+        "发送新密码"
+      ],
+      "rationale": "更安全，避免密码明文传输"
+    },
+    "importance": "high"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "success_pattern_59672": {
+    "task": "编写Python排序算法",
+    "config": {
+      "agents": [
+        "planner",
+        "coder"
+      ],
+      "max_rounds": 5
+    },
+    "score": 0.88,
+    "created_at": "2026-02-06T10:20:39.497040",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T10:20:39.497040"
+  },
+  "success_pattern_65619": {
+    "task": "Design a bike sharing system",
+    "config": {
+      "agents": 5,
+      "rounds": 3
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:26:12.167935",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:26:12.167935"
+  },
+  "success_pattern_72826": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:33:36.213403",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:33:36.213403"
+  },
+  "success_pattern_27514": {
+    "task": "设计REST API",
+    "config": {
+      "framework": "fastapi",
+      "auth": "jwt"
+    },
+    "score": 0.92,
+    "created_at": "2026-02-06T12:33:36.257461",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:33:36.257461"
+  },
+  "success_pattern_42836": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:34:06.837163",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:34:06.837163"
+  },
+  "success_pattern_93308": {
+    "task": "设计REST API",
+    "config": {
+      "framework": "fastapi",
+      "auth": "jwt"
+    },
+    "score": 0.92,
+    "created_at": "2026-02-06T12:34:06.889658",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:34:06.889658"
+  },
+  "success_pattern_45420": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:34:54.945600",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:34:54.945600"
+  },
+  "success_pattern_7141": {
+    "task": "设计REST API",
+    "config": {
+      "framework": "fastapi",
+      "auth": "jwt"
+    },
+    "score": 0.92,
+    "created_at": "2026-02-06T12:34:54.997345",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:34:54.997345"
+  },
+  "success_pattern_18116": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:35:41.118475",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:35:41.118475"
+  },
+  "success_pattern_51888": {
+    "task": "设计REST API",
+    "config": {
+      "framework": "fastapi",
+      "auth": "jwt"
+    },
+    "score": 0.92,
+    "created_at": "2026-02-06T12:35:41.171443",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:35:41.171443"
+  },
+  "success_pattern_43139": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "score": 0.85,
+    "created_at": "2026-02-06T12:37:00.113069",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:37:00.113069"
+  },
+  "success_pattern_11891": {
+    "task": "设计REST API",
+    "config": {
+      "framework": "fastapi",
+      "auth": "jwt"
+    },
+    "score": 0.92,
+    "created_at": "2026-02-06T12:37:00.158390",
+    "usage_count": 1,
+    "updated_at": "2026-02-06T12:37:00.158390"
+  },
+  "success_pattern_8024c70b": {
+    "task": "test task",
+    "config": {
+      "param": "value"
+    },
+    "emergence_score": 0.85,
+    "category": "general",
+    "usage_count": 1,
+    "created_at": "2026-02-06T12:44:59.906204",
+    "updated_at": "2026-02-06T12:44:59.906204"
+  },
+  "success_pattern_afe31b13": {
+    "task": "Implement user login",
+    "config": {
+      "framework": "fastapi",
+      "auth_type": "oauth"
+    },
+    "emergence_score": 0.82,
+    "category": "general",
+    "usage_count": 1,
+    "created_at": "2026-02-06T12:45:41.074874",
+    "updated_at": "2026-02-06T12:45:41.074874"
+  },
+  "success_pattern_0b027acd": {
+    "task": "Implement feature X",
+    "config": {
+      "model": "gpt-4"
+    },
+    "emergence_score": 0.8,
+    "category": "general",
+    "usage_count": 2,
+    "created_at": "2026-02-06T12:49:57.414597",
+    "updated_at": "2026-02-06T12:50:53.421901"
+  },
+  "test_pattern": {
+    "data": "value",
+    "usage_count": 2,
+    "created_at": "2026-02-06T12:49:57.415613",
+    "updated_at": "2026-02-06T12:50:53.421901"
+  },
+  "success_pattern_7643edda": {
+    "task": "编写一个快速排序算法",
+    "config": {
+      "language": "python",
+      "style": "recursive"
+    },
+    "emergence_score": 0.85,
+    "category": "general",
+    "usage_count": 7,
+    "created_at": "2026-02-06T12:51:31.928614",
+    "updated_at": "2026-02-06T13:10:02.462664"
+  },
+  "success_pattern_5ee213ee": {
+    "task": "快速排序",
+    "config": {
+      "language": "python"
+    },
+    "emergence_score": 0.85,
+    "category": "general",
+    "usage_count": 1,
+    "created_at": "2026-02-06T13:04:00.524201",
+    "updated_at": "2026-02-06T13:04:00.524201"
+  }
+}

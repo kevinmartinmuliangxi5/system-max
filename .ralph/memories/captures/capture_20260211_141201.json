@@ -1,0 +1,38 @@
+{
+  "id": "capture_20260211_141201",
+  "start_time": "2026-02-11T14:12:01.180688",
+  "metadata": {
+    "task_name": "实现OAuth第三方登录"
+  },
+  "interactions": [
+    {
+      "type": "user_prompt",
+      "timestamp": "2026-02-11T14:12:01.180688",
+      "prompt": "实现GitHub OAuth登录",
+      "context": {}
+    }
+  ],
+  "tool_calls": [],
+  "decisions": [
+    {
+      "timestamp": "2026-02-11T14:12:01.180688",
+      "description": "选择OAuth 2.0标准流程",
+      "alternatives": [
+        "OAuth 2.0",
+        "自定义认证"
+      ],
+      "rationale": "标准化，安全性高"
+    }
+  ],
+  "learnings": [
+    {
+      "timestamp": "2026-02-11T14:12:01.180688",
+      "observation": "Callback URL配置需要HTTPS",
+      "situation": "OAuth集成",
+      "outcome": "避免安全警告"
+    }
+  ],
+  "errors": [],
+  "end_time": "2026-02-11T14:12:01.180688",
+  "summary": "完成GitHub OAuth登录"
+}

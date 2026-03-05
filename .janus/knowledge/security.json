@@ -1,0 +1,103 @@
+{
+  "tech_stack": "Security",
+  "version": "1.0",
+  "description": "Web应用安全最佳实践",
+
+  "authentication": {
+    "password_storage": {
+      "description": "密码存储",
+      "do": "使用bcrypt, argon2等慢哈希算法",
+      "dont": "不要使用MD5, SHA1存储密码",
+      "code": "bcrypt.hashpw(password.encode(), bcrypt.gensalt(rounds=12))"
+    },
+    "session_management": {
+      "description": "会话管理",
+      "do": [
+        "使用安全的随机session ID",
+        "设置合理的过期时间",
+        "登出时销毁session"
+      ],
+      "dont": [
+        "不要在URL中传递session ID",
+        "不要使用可预测的session ID"
+      ]
+    },
+    "jwt_security": {
+      "description": "JWT安全",
+      "do": [
+        "使用强密钥（至少256位）",
+        "设置合理的过期时间",
+        "实现refresh token机制"
+      ],
+      "dont": [
+        "不要在JWT中存储敏感信息",
+        "不要使用none算法",
+        "不要在URL中传递JWT"
+      ]
+    }
+  },
+
+  "input_validation": {
+    "sql_injection": {
+      "description": "SQL注入防护",
+      "do": "使用参数化查询或ORM",
+      "bad": "f\"SELECT * FROM users WHERE id = {user_input}\"",
+      "good": "cursor.execute('SELECT * FROM users WHERE id = ?', (user_input,))"
+    },
+    "xss": {
+      "description": "XSS防护",
+      "do": [
+        "对输出进行HTML编码",
+        "使用Content-Security-Policy",
+        "使用HttpOnly cookie"
+      ]
+    },
+    "csrf": {
+      "description": "CSRF防护",
+      "do": [
+        "使用CSRF token",
+        "检查Referer/Origin头",
+        "使用SameSite cookie属性"
+      ]
+    }
+  },
+
+  "rate_limiting": {
+    "description": "请求限流",
+    "strategies": [
+      "固定窗口: 每分钟最多N次请求",
+      "滑动窗口: 更平滑的限流",
+      "令牌桶: 允许突发流量"
+    ],
+    "implementation": {
+      "python": "使用flask-limiter或slowapi",
+      "nginx": "limit_req_zone配置"
+    }
+  },
+
+  "common_vulnerabilities": [
+    {
+      "name": "敏感信息泄露",
+      "prevention": [
+        "不在代码中硬编码密钥",
+        "使用环境变量存储敏感配置",
+        "不在日志中记录敏感信息"
+      ]
+    },
+    {
+      "name": "文件上传漏洞",
+      "prevention": [
+        "验证文件类型（不仅仅是扩展名）",
+        "限制文件大小",
+        "存储到非Web可访问目录"
+      ]
+    },
+    {
+      "name": "路径遍历",
+      "prevention": [
+        "验证和清理文件路径",
+        "使用白名单而非黑名单"
+      ]
+    }
+  ]
+}

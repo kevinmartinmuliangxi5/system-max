@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "description": "双脑系统知识库索引",
+  "last_updated": "2024-02-04",
+
+  "knowledge_files": {
+    "streamlit": {
+      "file": "streamlit.json",
+      "description": "Streamlit Web应用框架",
+      "keywords": ["streamlit", "st.", "页面", "仪表盘", "dashboard"]
+    },
+    "python_web": {
+      "file": "python_web.json",
+      "description": "Python Web开发（FastAPI/Flask/Django）",
+      "keywords": ["fastapi", "flask", "django", "api", "后端"]
+    },
+    "react": {
+      "file": "react.json",
+      "description": "React前端框架",
+      "keywords": ["react", "jsx", "tsx", "hooks", "组件"]
+    },
+    "security": {
+      "file": "security.json",
+      "description": "Web安全最佳实践",
+      "keywords": ["安全", "认证", "加密", "token", "密码"]
+    }
+  },
+
+  "auto_load_rules": [
+    {
+      "trigger": "涉及登录、认证、密码",
+      "load": ["security", "python_web"]
+    },
+    {
+      "trigger": "涉及Streamlit应用",
+      "load": ["streamlit"]
+    },
+    {
+      "trigger": "涉及React前端",
+      "load": ["react"]
+    },
+    {
+      "trigger": "涉及API开发",
+      "load": ["python_web", "security"]
+    }
+  ],
+
+  "usage": {
+    "description": "知识库会在Dealer生成指令时自动加载相关内容",
+    "loading_process": [
+      "1. TaskRouter识别任务类型和技术栈",
+      "2. 根据技术栈加载对应知识库",
+      "3. 将知识库中的patterns和pitfalls注入指令",
+      "4. Worker执行时参考这些最佳实践"
+    ]
+  }
+}

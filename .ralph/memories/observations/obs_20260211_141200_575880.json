@@ -1,0 +1,14 @@
+{
+  "id": "obs_20260211_141200_575880",
+  "timestamp": "2026-02-11T14:12:00.575880",
+  "session_id": "sess_20260211_141200",
+  "observation": {
+    "type": "error_solution",
+    "content": "问题: Token已过期 | 解决: 提示用户重新申请重置",
+    "context": {
+      "error_type": "validation",
+      "stack_trace": ""
+    },
+    "importance": "high"
+  }
+}

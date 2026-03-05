@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "ai-image-mvp",
+    "slug": "ai-image-mvp",
+    "scheme": "ai-image-mvp",
+    "plugins": ["expo-router"]
+  }
+}

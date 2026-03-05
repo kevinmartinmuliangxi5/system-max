@@ -1,0 +1,16 @@
+{
+  "id": "e_20260206_130400_523201",
+  "timestamp": "2026-02-06T13:04:00.523201",
+  "task": "快速排序",
+  "config": {
+    "language": "python"
+  },
+  "result": {
+    "code": "def quicksort..."
+  },
+  "emergence_score": 0.85,
+  "task_embedding": [
+    0.1077
+  ],
+  "metadata": {}
+}

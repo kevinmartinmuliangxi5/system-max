@@ -1,0 +1,16 @@
+{
+  "id": "e_20260206_124459_906204",
+  "timestamp": "2026-02-06T12:44:59.906204",
+  "task": "test task",
+  "config": {
+    "param": "value"
+  },
+  "result": {
+    "output": "success"
+  },
+  "emergence_score": 0.85,
+  "task_embedding": [
+    0.7624
+  ],
+  "metadata": {}
+}

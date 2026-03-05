@@ -1,0 +1,19 @@
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest"]
+startup_timeout_sec = 60.0
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 60.0
+
+[mcp_servers.pencil]
+command = 'D:\AI_Projects\system-max\tools\pencil-mcp-server.exe'
+args = ["--app", "desktop"]
+
+[projects.'D:\AI_Projects\system-max']
+trust_level = "trusted"
+
+[windows]
+sandbox = "unelevated"

@@ -1,0 +1,16 @@
+
+> ai-image-mvp@0.1.0 web
+> expo start --web --port 8099
+
+Starting project at D:\AI_Projects\system-max\ai生图软件PRD相关前置文件
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+Waiting on http://localhost:8099
+Logs for your project will appear below.
+Web Bundled 1030ms node_modules\.pnpm\expo-router@4.0.22_962e5fe2a1481f13c5d2e4f10dee1d1c\node_modules\expo-router\entry.js (819 modules)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 44ms node_modules\.pnpm\expo-router@4.0.22_962e5fe2a1481f13c5d2e4f10dee1d1c\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 52ms node_modules\.pnpm\expo-router@4.0.22_962e5fe2a1481f13c5d2e4f10dee1d1c\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+^C

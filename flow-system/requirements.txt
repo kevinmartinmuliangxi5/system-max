@@ -1,0 +1,60 @@
+# FlowSystem - 真涌现编程系统 MVP
+# 依赖清单
+
+# === 核心依赖 ===
+# LLM API (使用OpenAI协议接入GLM Coding Plan)
+openai>=1.12.0
+
+# 异步框架
+aiohttp>=3.9.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# === UI框架 ===
+# 现代终端UI
+textual>=0.50.0
+textual-plotext>=0.2.0
+
+# 富文本输出
+rich>=13.0.0
+
+# === 科学计算 ===
+# 数值计算
+numpy>=1.24.0
+scipy>=1.11.0
+
+# 机器学习
+scikit-learn>=1.3.0
+
+# 向量检索 (FAISS)
+faiss-cpu>=1.7.4
+
+# === 代码分析 ===
+# 代码复杂度分析
+radon>=6.0.0
+
+# === 可视化 ===
+# 绘图库
+matplotlib>=3.8.0
+
+# 终端绘图
+plotext>=5.2.0
+
+# === 数据存储 ===
+# (内置) sqlite3 - Python标准库
+
+# === 进程管理 ===
+# 跨平台进程工具
+psutil>=5.9.0
+
+# === 开发工具 (可选) ===
+# 类型检查
+# mypy>=1.7.0
+
+# 代码格式化
+# black>=23.12.0
+
+# 测试框架
+# pytest>=7.4.0
+# pytest-asyncio>=0.23.0

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh --version:*)",
+      "Bash(where:*)",
+      "Bash(cmd /c \"dir D:\\\\AI_Projects\\\\system-max /a\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem -Path ''D:\\\\AI_Projects\\\\system-max'' -Force | Select-Object Name, Mode | Format-Table -AutoSize\")",
+      "Bash(printf:*)",
+      "Bash(git --version:*)",
+      "Bash(winget:*)",
+      "Bash(dir:*)",
+      "Bash(git -C \"D:/AI_Projects/system-max\" status)",
+      "Bash(echo:*)",
+      "Bash(git -C \"D:/AI_Projects/system-max\" init)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" --version)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" --version)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" repo view kevinmartinmuliangxi5/system-max --json name,url)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" repo create system-max --public --description \"System-Max AI Project\")",
+      "Bash(git -C \"D:/AI_Projects/system-max\" config user.email \"kevinmartinmuliangxi5@users.noreply.github.com\")",
+      "Bash(cmd /c \"dir D:\\\\AI_Projects\\\\ 2>&1\")",
+      "Bash(cmd /c \"dir D:\\\\AI_Projects\\\\system-max\\\\ 2>&1\")",
+      "Bash(cmd /c \"git -C D:\\\\AI_Projects\\\\system-max config user.email kevinmartinmuliangxi5@users.noreply.github.com 2>&1 && echo EXIT_CODE_EMAIL: 0 || echo EXIT_CODE_EMAIL: 1\")",
+      "Bash(cmd /c \"git -C D:\\\\AI_Projects\\\\system-max config user.name kevinmartinmuliangxi5 2>&1 && echo EXIT_CODE_NAME: 0 || echo EXIT_CODE_NAME: 1\")",
+      "Bash(cmd /c \"git -C D:\\\\AI_Projects\\\\system-max remote add origin https://github.com/kevinmartinmuliangxi5/system-max.git 2>&1 && echo EXIT_CODE_REMOTE_ADD: 0 || echo EXIT_CODE_REMOTE_ADD: 1\")",
+      "Bash(cmd /c \"git -C D:\\\\AI_Projects\\\\system-max remote -v 2>&1 && echo EXIT_CODE_REMOTE_V: 0 || echo EXIT_CODE_REMOTE_V: 1\")",
+      "Bash(git -C \"D:/AI_Projects/system-max\" status --short)",
+      "Bash(git -C \"D:/AI_Projects/system-max\" add .)",
+      "Bash(git -C:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)"
+    ]
+  }
+}

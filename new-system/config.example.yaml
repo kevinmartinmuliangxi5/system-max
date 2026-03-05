@@ -1,0 +1,85 @@
+# ECS 配置文件示例
+# 多Agent无领导小组讨论真涌现系统配置
+
+# === LLM配置 ===
+llm:
+  provider: "anthropic"           # 提供商：anthropic 或 openai
+  model: "claude-sonnet-4-20250514"  # 模型选择
+  temperature: 0.7                   # 温度参数（0-1，越高越随机）
+  max_tokens: 2000                  # 最大token数
+
+# === 涌现检测配置 ===
+emergence:
+  diversity_threshold: 0.5        # 多样性阈值（0-1）
+  consensus_threshold: 0.7       # 共识阈值（0-1）
+  novelty_threshold: 0.6         # 新颖度阈值（0-1）
+  emergence_threshold: 0.7       # 涌现阈值（0-1，达到此值认为涌现）
+  diversity_weight: 0.3          # 多样性权重（综合指标计算）
+  consensus_weight: 0.3          # 共识权重
+  novelty_weight: 0.4            # 新颖度权重
+  enable_phase_detection: true    # 启用阶段检测
+  enable_network_analysis: true   # 启用网络分析
+  enable_synergy_detection: true  # 启用协同检测
+
+# === Agent配置 ===
+agents:
+  count: 5                         # Agent数量（建议3-10）
+  selection_strategy: "auto"       # 选择策略：auto/diverse/random/custom
+  enable_personality: true        # 启用性格差异
+  enable_theory_of_mind: true      # 启用心智建模
+  enable_learning: false          # 启用学习能力
+
+  # 自定义角色列表（当selection_strategy=custom时使用）
+  custom_roles:
+    - architect
+    - hacker
+    - skeptic
+    - tester
+    - optimizer
+
+# === 协作流程配置 ===
+collaboration:
+  max_rounds: 3                     # 最大讨论轮数（建议2-5）
+  consensus_threshold: 0.7        # 收敛阈值（0-1）
+  early_stop: true                  # 启用早停
+  timeout_per_round: 300            # 每轮超时（秒）
+  discussion_mode: "broadcast"       # 讨论模式：broadcast/p2p/hybrid
+  enable_parallel: true             # 启用并行处理
+  batch_size: 3                     # 批处理大小
+
+  # SPAR循环配置
+  enable_sense_phase: true          # 启用感知阶段
+  enable_discuss_phase: true        # 启用讨论阶段
+  enable_act_phase: true            # 启用行动阶段
+  enable_reflect_phase: true        # 启用反思阶段
+
+  # 迹发沟通配置
+  stigmergy_enabled: true           # 启用迹发沟通
+  environment_context_size: 100     # 环境上下文大小
+
+  # 温度配置
+  temperature_dynamic: true         # 启用动态温度调整
+  temperature_discuss: 0.8          # 讨论阶段温度
+  temperature_act: 0.2              # 行动阶段温度
+
+# === 输出配置 ===
+output:
+  format: "structured"             # 输出格式：structured/narrative/both
+  include_process: true            # 包含过程记录
+  include_metrics: true            # 包含指标数据
+  include_agent_details: false     # 包含Agent详情
+  export_format: "json"            # 导出格式：json/markdown/html
+  output_dir: "output"             # 输出目录
+  auto_save: true                  # 自动保存结果
+
+# === 日志配置 ===
+logging:
+  level: "INFO"                     # 日志级别：DEBUG/INFO/WARNING/ERROR
+  file: "ecs.log"                   # 日志文件
+  console: true                     # 控制台输出
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# === 全局设置 ===
+verbose: false                     # 详细输出
+debug: false                       # 调试模式
+workspace: "workspace"             # 工作目录

@@ -1,0 +1,14 @@
+{
+  "id": "obs_20260211_141200_570911",
+  "timestamp": "2026-02-11T14:12:00.570911",
+  "session_id": "sess_20260211_141200",
+  "observation": {
+    "type": "error_solution",
+    "content": "问题: 邮件发送失败 | 解决: 使用SMTP重试机制",
+    "context": {
+      "error_type": "email",
+      "stack_trace": ""
+    },
+    "importance": "high"
+  }
+}

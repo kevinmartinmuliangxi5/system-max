@@ -1,0 +1,13 @@
+{
+  "blueprint": [
+    {
+      "task_name": "实现用户登录API接口",
+      "instruction": "使用Flask实现RESTful登录API，支持JWT认证，包括登录、登出和Token刷新功能",
+      "target_files": [
+        "api/auth.py",
+        "models/user.py"
+      ],
+      "status": "PENDING"
+    }
+  ]
+}

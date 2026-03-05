@@ -1,0 +1,13 @@
+# 多Agent协作讨论系统依赖
+
+# OpenAI协议（用于GLM Coding Plan）
+openai>=1.12.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# 异步框架（标准库）
+# asyncio - Python 3.7+内置
+
+# 可选：日志美化
+# rich>=13.0.0

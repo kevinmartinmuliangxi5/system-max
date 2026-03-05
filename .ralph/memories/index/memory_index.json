@@ -1,0 +1,102 @@
+{
+  "sessions": [
+    {
+      "id": "sess_20260211_141200",
+      "timestamp": "2026-02-11T14:12:00.569260",
+      "file": ".ralph\\memories\\sessions\\sess_20260211_141200.json",
+      "compressed": true
+    },
+    {
+      "id": "sess_20260211_141200",
+      "timestamp": "2026-02-11T14:12:00.574880",
+      "file": ".ralph\\memories\\sessions\\sess_20260211_141200.json",
+      "compressed": false
+    },
+    {
+      "id": "sess_20260211_141201",
+      "timestamp": "2026-02-11T14:12:01.182325",
+      "file": ".ralph\\memories\\sessions\\sess_20260211_141201.json",
+      "compressed": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs_20260211_141200_569874",
+      "timestamp": "2026-02-11T14:12:00.569874",
+      "type": "task_definition",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_569874.json"
+    },
+    {
+      "id": "obs_20260211_141200_569874",
+      "timestamp": "2026-02-11T14:12:00.569874",
+      "type": "decision",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_569874.json"
+    },
+    {
+      "id": "obs_20260211_141200_569874",
+      "timestamp": "2026-02-11T14:12:00.569874",
+      "type": "learning",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_569874.json"
+    },
+    {
+      "id": "obs_20260211_141200_570911",
+      "timestamp": "2026-02-11T14:12:00.570911",
+      "type": "error_solution",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_570911.json"
+    },
+    {
+      "id": "obs_20260211_141200_574880",
+      "timestamp": "2026-02-11T14:12:00.574880",
+      "type": "task_definition",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_574880.json"
+    },
+    {
+      "id": "obs_20260211_141200_574880",
+      "timestamp": "2026-02-11T14:12:00.574880",
+      "type": "decision",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_574880.json"
+    },
+    {
+      "id": "obs_20260211_141200_575880",
+      "timestamp": "2026-02-11T14:12:00.575880",
+      "type": "learning",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_575880.json"
+    },
+    {
+      "id": "obs_20260211_141200_575880",
+      "timestamp": "2026-02-11T14:12:00.575880",
+      "type": "error_solution",
+      "session_id": "sess_20260211_141200",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141200_575880.json"
+    },
+    {
+      "id": "obs_20260211_141201_183354",
+      "timestamp": "2026-02-11T14:12:01.183354",
+      "type": "task_definition",
+      "session_id": "sess_20260211_141201",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141201_183354.json"
+    },
+    {
+      "id": "obs_20260211_141201_183354",
+      "timestamp": "2026-02-11T14:12:01.183354",
+      "type": "decision",
+      "session_id": "sess_20260211_141201",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141201_183354.json"
+    },
+    {
+      "id": "obs_20260211_141201_184354",
+      "timestamp": "2026-02-11T14:12:01.184354",
+      "type": "learning",
+      "session_id": "sess_20260211_141201",
+      "file": ".ralph\\memories\\observations\\obs_20260211_141201_184354.json"
+    }
+  ],
+  "last_updated": "2026-02-11T14:12:01.184354"
+}

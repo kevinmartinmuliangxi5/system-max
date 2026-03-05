@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["data"],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          { "required": ["b64_json"] },
+          { "required": ["url"] }
+        ],
+        "properties": {
+          "b64_json": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    }
+  }
+}

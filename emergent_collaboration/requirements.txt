@@ -1,0 +1,30 @@
+# ECS - EmergentCollaboration System Requirements
+# 多Agent无领导小组讨论真涌现系统依赖
+
+# === 核心框架 ===
+# 根据配置自动选择LLM provider
+# anthropic>=0.18.0  # Anthropic Claude (推荐)
+# openai>=1.12.0     # OpenAI GPT (备选)
+
+# === 异步支持 ===
+asyncio>=3.11.0
+
+# === 数据处理 ===
+numpy>=1.24.0
+scipy>=1.11.0
+
+# === 机器学习 ===
+scikit-learn>=1.3.0
+
+# === 配置文件解析 ===
+pyyaml>=6.0
+
+# === 数据科学（可选，用于高级功能） ===
+# networkx>=3.0        # 网络分析（可选）
+# matplotlib>=3.8.0     # 可视化（可选）
+
+# === 开发工具 ===
+python-dotenv>=1.0.0
+
+# === 类型提示 ===
+# typing-extensions>=4.0.0  # Python 3.10+可能需要

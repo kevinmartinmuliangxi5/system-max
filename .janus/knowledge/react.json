@@ -1,0 +1,75 @@
+{
+  "tech_stack": "React",
+  "version": "1.0",
+  "description": "React前端框架最佳实践",
+
+  "patterns": {
+    "functional_component": {
+      "description": "函数组件",
+      "code": "const Component = ({ prop }) => {\n  return <div>{prop}</div>;\n};",
+      "note": "推荐使用函数组件而非类组件"
+    },
+    "useState": {
+      "description": "状态管理",
+      "code": "const [state, setState] = useState(initialValue);",
+      "note": "setState是异步的，不要直接修改state"
+    },
+    "useEffect": {
+      "description": "副作用处理",
+      "code": "useEffect(() => {\n  // effect\n  return () => { /* cleanup */ };\n}, [deps]);",
+      "note": "空依赖数组[]只在mount时执行"
+    },
+    "useMemo": {
+      "description": "计算缓存",
+      "code": "const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);",
+      "note": "用于优化性能，避免重复计算"
+    },
+    "useCallback": {
+      "description": "函数缓存",
+      "code": "const memoizedCallback = useCallback(() => { doSomething(a, b); }, [a, b]);",
+      "note": "用于避免子组件不必要的重渲染"
+    }
+  },
+
+  "state_management": {
+    "context": {
+      "description": "React Context",
+      "create": "const MyContext = createContext(defaultValue);",
+      "provider": "<MyContext.Provider value={value}>",
+      "consume": "const value = useContext(MyContext);"
+    },
+    "redux": {
+      "description": "Redux状态管理",
+      "note": "大型应用推荐，小型应用用Context即可"
+    },
+    "zustand": {
+      "description": "轻量级状态管理",
+      "note": "比Redux简单，比Context强大"
+    }
+  },
+
+  "common_pitfalls": [
+    {
+      "problem": "无限循环",
+      "solution": "检查useEffect依赖数组"
+    },
+    {
+      "problem": "状态不更新",
+      "solution": "setState是异步的，使用回调或useEffect"
+    },
+    {
+      "problem": "子组件重复渲染",
+      "solution": "使用React.memo, useMemo, useCallback"
+    },
+    {
+      "problem": "key警告",
+      "solution": "列表渲染时提供唯一key"
+    }
+  ],
+
+  "performance": {
+    "lazy_loading": "const Component = React.lazy(() => import('./Component'));",
+    "suspense": "<Suspense fallback={<Loading />}><Component /></Suspense>",
+    "virtual_list": "使用react-window或react-virtualized处理长列表"
+  }
+}

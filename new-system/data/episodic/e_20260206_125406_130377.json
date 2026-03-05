@@ -1,0 +1,17 @@
+{
+  "id": "e_20260206_125406_130377",
+  "timestamp": "2026-02-06T12:54:06.130377",
+  "task": "编写一个快速排序算法",
+  "config": {
+    "language": "python",
+    "style": "recursive"
+  },
+  "result": {
+    "code": "def quicksort..."
+  },
+  "emergence_score": 0.85,
+  "task_embedding": [
+    0.9796
+  ],
+  "metadata": {}
+}

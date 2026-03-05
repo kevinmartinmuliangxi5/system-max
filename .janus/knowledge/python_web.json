@@ -1,0 +1,79 @@
+{
+  "tech_stack": "Python Web",
+  "version": "1.0",
+  "description": "Python Web开发通用最佳实践",
+
+  "frameworks": {
+    "fastapi": {
+      "description": "现代高性能API框架",
+      "patterns": {
+        "basic_route": "@app.get('/path')\nasync def handler():\n    return {'data': 'value'}",
+        "path_param": "@app.get('/items/{item_id}')\nasync def get_item(item_id: int):",
+        "request_body": "@app.post('/items')\nasync def create_item(item: ItemModel):",
+        "dependency": "from fastapi import Depends"
+      }
+    },
+    "flask": {
+      "description": "轻量级Web框架",
+      "patterns": {
+        "basic_route": "@app.route('/path')\ndef handler():\n    return jsonify({'data': 'value'})",
+        "methods": "@app.route('/path', methods=['GET', 'POST'])"
+      }
+    },
+    "django": {
+      "description": "全功能Web框架",
+      "patterns": {
+        "view": "def view(request):\n    return HttpResponse('content')",
+        "model": "class Model(models.Model):\n    field = models.CharField(max_length=100)"
+      }
+    }
+  },
+
+  "authentication": {
+    "jwt": {
+      "description": "JSON Web Token认证",
+      "library": "PyJWT",
+      "encode": "jwt.encode({'user_id': 1, 'exp': datetime.utcnow() + timedelta(hours=24)}, SECRET_KEY, algorithm='HS256')",
+      "decode": "jwt.decode(token, SECRET_KEY, algorithms=['HS256'])"
+    },
+    "password": {
+      "description": "密码加密",
+      "library": "bcrypt",
+      "hash": "bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())",
+      "verify": "bcrypt.checkpw(password.encode('utf-8'), hashed)"
+    }
+  },
+
+  "database": {
+    "sqlalchemy": {
+      "description": "Python ORM",
+      "connection": "engine = create_engine('sqlite:///db.sqlite')",
+      "session": "Session = sessionmaker(bind=engine)",
+      "query": "session.query(Model).filter(Model.id == 1).first()"
+    },
+    "redis": {
+      "description": "缓存数据库",
+      "connection": "redis.Redis(host='localhost', port=6379, db=0)",
+      "operations": "r.set('key', 'value'), r.get('key'), r.delete('key')"
+    }
+  },
+
+  "common_pitfalls": [
+    {
+      "problem": "bcrypt需要bytes类型",
+      "solution": "使用password.encode('utf-8')"
+    },
+    {
+      "problem": "JWT过期",
+      "solution": "检查exp字段，实现refresh token机制"
+    },
+    {
+      "problem": "SQL注入",
+      "solution": "使用参数化查询或ORM"
+    },
+    {
+      "problem": "CORS错误",
+      "solution": "配置CORS中间件"
+    }
+  ]
+}

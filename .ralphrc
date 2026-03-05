@@ -1,0 +1,50 @@
+# Ralph 项目配置文件
+
+# 项目基本信息
+PROJECT_NAME="system-max"
+PROJECT_TYPE="auto"
+
+# 循环设置
+MAX_CALLS_PER_HOUR=100
+CLAUDE_TIMEOUT_MINUTES=9999
+CLAUDE_OUTPUT_FORMAT="json"
+
+# 工具权限（逗号分隔）
+# 完全自动化模式 - 允许所有工具
+ALLOWED_TOOLS="*"
+
+# 会话管理
+SESSION_CONTINUITY=false
+SESSION_EXPIRY_HOURS=24
+
+# 熔断器阈值
+CB_NO_PROGRESS_THRESHOLD=3
+CB_SAME_ERROR_THRESHOLD=5
+
+# 退出检测阈值
+MAX_CONSECUTIVE_TEST_LOOPS=3
+MAX_CONSECUTIVE_DONE_SIGNALS=2
+TEST_PERCENTAGE_THRESHOLD=30
+
+# 监控设置
+VERBOSE=false
+ENABLE_MONITORING=true
+
+# ============================================
+# 双脑集成配置（新增）
+# ============================================
+
+# 启用双脑模式
+DUAL_BRAIN_MODE=true
+
+# Dealer脚本路径
+DEALER_SCRIPT="python dealer_enhanced.py --ralph-mode"
+
+# 任务蓝图文件
+BLUEPRINT_FILE=".janus/project_state.json"
+
+# 指令输出文件
+INSTRUCTION_FILE=".ralph/current_instruction.txt"
+
+# 海马体记忆文件
+HIPPOCAMPUS_FILE=".janus/long_term_memory.json"

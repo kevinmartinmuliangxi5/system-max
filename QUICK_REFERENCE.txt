@@ -1,0 +1,232 @@
+╔══════════════════════════════════════════════════════════════╗
+║           Plotly + Streamlit 雷达图 - 快速参考卡                ║
+╚════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. 基础雷达图代码（Plotly Express）                                │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+import plotly.express as px
+
+fig = px.line_polar(
+    r=[85, 78, 72, 88, 82],
+    theta=['技术能力', '沟通能力', '领导力', '创新能力', '学习能力'],
+    line_close=True
+)
+fig.update_traces(fill='toself', line_color='#1f77b4')
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. 基础雷达图代码（Graph Objects）                                │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+import plotly.graph_objects as go
+
+categories = ['技术能力', '沟通能力', '领导力', '创新能力', '学习能力']
+values = [85, 78, 72, 88, 82]
+
+# 重要：闭合多边形
+values_closed = values + [values[0]]
+categories_closed = categories + [categories[0]]
+
+fig = go.Figure()
+fig.add_trace(go.Scatterpolar(
+    r=values_closed,
+    theta=categories_closed,
+    fill='toself',
+    line=dict(color='#1f77b4', width=2)
+))
+fig.update_layout(
+    polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+    font=dict(family='"Microsoft YaHei", "SimHei", sans-serif')  # 中文支持
+)
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 3. 多人对比雷达图                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+data = {
+    '张三': [85, 78, 72, 88, 82],
+    '李四': [75, 85, 80, 70, 90]
+}
+colors = ['#1f77b4', '#ff7f0e']
+
+fig = go.Figure()
+for idx, (name, scores) in enumerate(data.items()):
+    scores_closed = scores + [scores[0]]
+    fig.add_trace(go.Scatterpolar(
+        r=scores_closed,
+        theta=categories_closed,
+        name=name,
+        fill='toself',
+        line=dict(color=colors[idx])
+    ))
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 4. Streamlit集成代码                                                   │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+import streamlit as st
+import plotly.graph_objects as go
+
+fig = go.Figure()
+fig.add_trace(go.Scatterpolar(
+    r=[85, 78, 72, 88, 82, 85],
+    theta=['技术能力', '沟通能力', '领导力', '创新能力', '学习能力', '技术能力'],
+    fill='toself'
+))
+
+# 关键配置
+fig.update_layout(
+    font=dict(family='"Microsoft YaHei", "SimHei", sans-serif'),  # 中文
+    height=500  # 固定高度避免跳动
+)
+
+st.plotly_chart(fig, use_container_width=True)  # 响应式宽度
+#             ^^^^^^^^^^^^^^^^^^^^^^
+#             自适应容器宽度
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 5. 中文字体配置                                                       │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+fig.update_layout(
+    font=dict(
+        # 字体栈：依次尝试这些字体
+        family='"Microsoft YaHei", "SimHei", "PingFang SC", sans-serif'
+    )
+)
+
+# 推荐字体：
+# Windows: Microsoft YaHei（微软雅黑）
+# Windows: SimHei（黑体）
+# Mac/Linux: PingFang SC
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 6. 颜色主题                                                           │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+# 使用Plotly内置主题
+fig.update_layout(template='plotly_dark')
+
+# 可用主题：
+# - plotly       (默认）
+# - plotly_white
+# - plotly_dark
+# - ggplot2
+# - seaborn
+# - simple_white
+
+# 自定义颜色
+colors = {
+    'professional': ['#1f77b4', '#ff7f0e', '#2ca02c'],  # 专业蓝
+    'vibrant': ['#FF6B6B', '#4ECDC4', '#45B7D1'],      # 活力彩虹
+    'nature': ['#2d6a4f', '#388d3c', '#57a773']         # 自然绿
+}
+
+# 使用透明填充
+fillcolor='rgba(31, 119, 180, 0.3)'  # 30%透明
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 7. 响应式布局                                                         │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+# 创建响应式列
+col1, col2, col3 = st.columns([1, 2, 1])  # 比例1:2:1
+
+with col2:
+    st.plotly_chart(fig, use_container_width=True)
+
+# use_container_width=True：图表宽度自适应容器
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 8. 运行命令                                                           │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+# Windows用户：
+run_radar_demo.bat
+
+# 所有用户：
+streamlit run streamlit_radar_chart_demo.py
+streamlit run streamlit_radar_chart_quick_reference.py
+streamlit run streamlit_radar_chart_best_practices.py
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 9. 核心参数说明                                                       │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+参数        | 说明                    | 推荐值
+-----------|------------------------|----------
+r           | 半径方向数值            | 数据值
+theta       | 角度方向类别            | 维度名称
+fill        | 填充模式                | 'toself'=闭合填充
+line_close  | 是否闭合（PX）          | True
+line.width  | 线条宽度               | 2-3
+marker.size | 数据点大小               | 6-10
+fillcolor   | 填充颜色              | 带透明度的颜色
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 10. 最佳实践要点                                                       │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+DO（推荐）:
+  ✓ 始终闭合多边形（首尾数据重复）
+  ✓ 使用统一的数值范围
+  ✓ 维度控制在5-7个
+  ✓ 使用透明填充（alpha 0.2-0.4）
+  ✓ use_container_width=True实现响应式
+  ✓ 固定图表高度避免跳动
+
+DON'T（避免）:
+  ✗ 不要使用超过7个维度
+  ✗ 不要忽略多边形闭合
+  ✗ 不要硬编码单一字体
+  ✗ 不要在Streamlit中使用复杂动画
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 11. 文件结构说明                                                     │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+stream_radar_chart_demo.py           - 完整功能演示应用（推荐首先运行）
+streamlit_radar_chart_quick_reference.py  - 快速代码参考
+streamlit_radar_chart_best_practices.py  - 最佳实践演示
+streamlit_radar_utils.py               - 可复用工具模块
+RADAR_CHART_GUIDE.md                  - 完整使用文档
+README_RADAR_CHART.md                   - 项目说明文档
+requirements.txt                        - Python依赖列表
+run_radar_demo.bat                    - 快速启动脚本（Windows）
+QUICK_REFERENCE.txt                     - 本快速参考卡
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ 12. 快速开始                                                           │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+1. 安装依赖：
+   pip install -r requirements.txt
+
+2. 运行示例：
+   streamlit run streamlit_radar_chart_demo.py
+
+3. 在浏览器打开：
+   http://localhost:8501
+
+
+╔═════════════════════════════════════════════════════════════════╗
+║                       联系与支持                                        ║
+║                                                                             ║
+║  完整文档: RADAR_CHART_GUIDE.md                                         ║
+║  项目说明: README_RADAR_CHART.md                                          ║
+║                                                                             ║
+║  Created: 2025-02-12                                                     ║
+║  Version: 1.0.0                                                         ║
+╚═════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,17 @@
+{
+  "id": "ep_20260206_123336_255468",
+  "timestamp": "2026-02-06T12:33:36.255468",
+  "task": "设计REST API",
+  "config": {
+    "framework": "fastapi",
+    "auth": "jwt"
+  },
+  "result": {
+    "endpoints": 10,
+    "tests": "passing"
+  },
+  "emergence_score": 0.92,
+  "task_embedding": [
+    0.5681999921798706
+  ]
+}

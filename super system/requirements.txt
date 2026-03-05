@@ -1,0 +1,67 @@
+# 双脑Ralph系统 v3.0 完整版依赖
+# Dual-Brain Ralph System v3.0 Complete Dependencies
+# 最后更新: 2026-02-11
+
+# ====================
+# 核心依赖 / Core Dependencies
+# ====================
+
+# 中文分词 / Chinese Word Segmentation
+jieba>=0.42.1
+
+# Claude API / Anthropic SDK
+anthropic>=0.18.0
+
+# 剪贴板操作 / Clipboard Operations (可选)
+pyperclip>=1.8.2
+
+# 颜色输出 / Terminal Colors
+colorama>=0.4.6
+
+# HTTP请求 / HTTP Requests
+requests>=2.31.0
+
+# ====================
+# 可选依赖 / Optional Dependencies
+# ====================
+
+# 智谱AI API (可选) / Zhipu AI API (Optional)
+# zhipuai>=4.0.0
+
+# 向量数据库 (可选，用于claude-mem增强) / Vector DB (Optional)
+# chromadb>=0.4.22
+# faiss-cpu>=1.7.4
+
+# 数据处理 (可选) / Data Processing (Optional)
+# numpy>=1.24.0
+# pandas>=2.0.0
+
+# ====================
+# 开发依赖 / Development Dependencies
+# ====================
+
+# 代码测试 / Testing
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+
+# 代码格式化 / Code Formatting
+# black>=23.7.0
+# isort>=5.12.0
+
+# 类型检查 / Type Checking
+# mypy>=1.5.0
+
+# ====================
+# 说明 / Notes
+# ====================
+#
+# 1. 基础运行只需要核心依赖部分
+# 2. 可选依赖根据需要安装
+# 3. 开发依赖仅在开发调试时需要
+#
+# Installation:
+#   pip install -r requirements.txt    # 安装核心依赖
+#   pip install -r requirements.txt --optional  # 安装所有依赖(包括可选)
+#
+# Minimum Installation:
+#   pip install jieba anthropic

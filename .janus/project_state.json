@@ -1,0 +1,10 @@
+{
+  "blueprint": [
+    {
+      "task_name": "测试GLM CE集成 - Phase 1: 核心功能实现",
+      "instruction": "测试GLM CE集成",
+      "target_files": [],
+      "status": "PENDING"
+    }
+  ]
+}

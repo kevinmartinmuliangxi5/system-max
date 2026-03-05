@@ -1,0 +1,17 @@
+{
+  "id": "obs_20260211_141201_183354",
+  "timestamp": "2026-02-11T14:12:01.183354",
+  "session_id": "sess_20260211_141201",
+  "observation": {
+    "type": "decision",
+    "content": "选择OAuth 2.0标准流程",
+    "context": {
+      "alternatives": [
+        "OAuth 2.0",
+        "自定义认证"
+      ],
+      "rationale": "标准化，安全性高"
+    },
+    "importance": "high"
+  }
+}

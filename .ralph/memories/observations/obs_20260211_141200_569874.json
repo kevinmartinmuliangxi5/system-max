@@ -1,0 +1,14 @@
+{
+  "id": "obs_20260211_141200_569874",
+  "timestamp": "2026-02-11T14:12:00.569874",
+  "session_id": "sess_20260211_141200",
+  "observation": {
+    "type": "learning",
+    "content": "邮箱验证链接有效期设置为24小时",
+    "context": {
+      "situation": "用户注册流程",
+      "outcome": "减少过期投诉"
+    },
+    "importance": "medium"
+  }
+}

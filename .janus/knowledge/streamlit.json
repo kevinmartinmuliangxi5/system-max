@@ -1,0 +1,72 @@
+{
+  "tech_stack": "Streamlit",
+  "version": "1.0",
+  "description": "Streamlit Python Web应用框架最佳实践",
+
+  "patterns": {
+    "page_config": {
+      "description": "页面配置必须在最开始",
+      "code": "st.set_page_config(page_title='标题', layout='wide', initial_sidebar_state='collapsed')",
+      "note": "必须在任何st命令之前调用，否则报错"
+    },
+    "session_state": {
+      "description": "状态管理",
+      "code": "if 'key' not in st.session_state:\n    st.session_state.key = default_value",
+      "note": "用于跨重运行保持状态"
+    },
+    "file_upload": {
+      "description": "文件上传",
+      "code": "uploaded_file = st.file_uploader('选择文件', type=['csv', 'xlsx'])",
+      "note": "accept_multiple_files=True支持多文件"
+    },
+    "caching": {
+      "description": "数据缓存",
+      "code": "@st.cache_data\ndef load_data():\n    return pd.read_csv('data.csv')",
+      "note": "st.cache_data用于数据，st.cache_resource用于资源"
+    }
+  },
+
+  "common_pitfalls": [
+    {
+      "problem": "st.set_page_config报错",
+      "solution": "确保它是文件中第一个st命令"
+    },
+    {
+      "problem": "状态丢失",
+      "solution": "使用st.session_state保存状态"
+    },
+    {
+      "problem": "页面刷新重复执行",
+      "solution": "使用@st.cache_data缓存结果"
+    },
+    {
+      "problem": "侧边栏不显示",
+      "solution": "检查initial_sidebar_state设置"
+    }
+  ],
+
+  "layout_patterns": {
+    "columns": "col1, col2 = st.columns(2)",
+    "tabs": "tab1, tab2 = st.tabs(['Tab1', 'Tab2'])",
+    "expander": "with st.expander('展开详情'):",
+    "sidebar": "with st.sidebar:"
+  },
+
+  "input_widgets": {
+    "text": "st.text_input('标签')",
+    "number": "st.number_input('数字')",
+    "select": "st.selectbox('选择', options)",
+    "multiselect": "st.multiselect('多选', options)",
+    "slider": "st.slider('滑块', min, max)",
+    "date": "st.date_input('日期')",
+    "file": "st.file_uploader('文件')"
+  },
+
+  "display_elements": {
+    "text": "st.write(), st.markdown(), st.text()",
+    "data": "st.dataframe(), st.table()",
+    "chart": "st.line_chart(), st.bar_chart(), st.plotly_chart()",
+    "media": "st.image(), st.audio(), st.video()",
+    "status": "st.success(), st.error(), st.warning(), st.info()"
+  }
+}

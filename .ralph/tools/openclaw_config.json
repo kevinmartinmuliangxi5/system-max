@@ -1,0 +1,42 @@
+{
+  "enabled": false,
+  "url": "http://localhost:8080",
+  "api_key": "",
+  "max_parallel_tasks": 5,
+  "timeout": 300,
+  "retry": {
+    "enabled": true,
+    "max_attempts": 3,
+    "backoff": "exponential"
+  },
+  "notification": {
+    "enabled": false,
+    "webhook_url": ""
+  },
+  "task_templates": {
+    "brain": {
+      "resources": {
+        "cpu": "2",
+        "memory": "2Gi"
+      }
+    },
+    "dealer": {
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi"
+      }
+    },
+    "worker": {
+      "resources": {
+        "cpu": "4",
+        "memory": "4Gi"
+      }
+    }
+  },
+  "notes": [
+    "OpenClaw是一个分布式任务执行框架",
+    "启用前需要先部署OpenClaw服务",
+    "详见: https://github.com/your-org/openclaw",
+    "当前为模拟实现，用于框架集成准备"
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "p": "Streamlit 语音录制",
+    "s": "st.audio_input 支持 wav/mp3/m4a，需用 tempfile 保存后再调用 API 处理"
+  },
+  {
+    "p": "Groq Whisper 集成",
+    "s": "使用 whisper-large-v3 模型，文件限制 25MB，支持 verbose_json 获取时长"
+  },
+  {
+    "p": "ZhipuAI GLM-4-Flash",
+    "s": "性价比高，适合面试评分场景，temperature=0.7 平衡创造性"
+  },
+  {
+    "p": "动态权重计算",
+    "s": "滑块值 0-50 映射到 0.0-0.5，使用 deepcopy 避免修改原始配置，最后归一化"
+  },
+  {
+    "p": "Streamlit 会话状态",
+    "s": "st.session_state 用于保存题目索引、历史记录、转写文本等跨刷新数据"
+  },
+  {
+    "p": "Worker 代码规范",
+    "s": "Worker 会主动添加验证函数、辅助函数、模块测试，超出任务要求"
+  },
+  {
+    "p": "环境变量配置",
+    "s": "使用 python-dotenv 和 .env.example 模板，API Key 不应硬编码"
+  },
+  {
+    "p": "公考面试题型",
+    "s": "五大题型：综合分析(点析对升)、计划组织(定摸筹控结)、应急应变(稳明调解报总)、人际关系、情景模拟"
+  },
+  {
+    "p": "岗位画像矩阵",
+    "s": "三类岗位(执法/服务/管理)各有核心权重，滑块可微调刚柔比例"
+  },
+  {
+    "p": "评分溯源设计",
+    "s": "AI 必须引用考生原话并标注加分/扣分原因，增强反馈可信度"
+  },
+  {
+    "p": "Streamlit UI模板选择",
+    "s": "5种预设模板：左右分栏(A)、标签页(B)、卡片网格(C)、聊天界面(D)、分步向导(E)"
+  },
+  {
+    "p": "UI设计选型流程",
+    "s": "先选模板再自然语言微调，比从零描述效率高3倍"
+  },
+  {
+    "p": "Streamlit布局模式",
+    "s": "st.sidebar侧边栏、st.columns多列、st.tabs标签页、st.chat_message对话"
+  },
+  {
+    "p": "Brain提问交互优化",
+    "s": "Brain提问应一道一道来，用AskUserQuestion工具提供选项让用户点选，而不是让用户打字一次性回答多个问题"
+  },
+  {
+    "p": "Brain需求确认方式",
+    "s": "确认需求时应使用自然语言复述理解，而非简单重复用户原话，展示真正理解了用户意图"
+  },
+  {
+    "p": "Brain审核工作流强制步骤",
+    "s": "每个Phase完成后必须：1)审查Worker代码 2)输出审查报告 3)存储经验到海马体 4)才能进入下一阶段。绝不能跳过审核直接生成下一阶段指令"
+  },
+  {
+    "p": "UI Library架构模式",
+    "s": "模块化架构：config.py单例配置、__init__.py延迟加载防循环依赖、占位符类兼容未实现模块、dataclass配置类支持JSON序列化"
+  },
+  {
+    "p": "大型组件设计规范",
+    "s": "LargeComponent包含：id/name/category枚举/description/ASCII preview/features列表/code_skeleton/props/tags/dependencies/industry_compatibility，配套get/list/search辅助函数"
+  },
+  {
+    "p": "中型组件可组合设计",
+    "s": "MediumComponent新增composable字段标记可组合性，get_composable_components()返回可用于构建大型组件的区块，为组件组合系统提供基础"
+  },
+  {
+    "p": "主题引擎设计模式",
+    "s": "ThemeEngine单例+历史记录栈，支持apply_theme/switch_theme/get_css_variables，Streamlit集成render_theme_switcher，自动检测auto_detect_theme_mode"
+  },
+  {
+    "p": "智能推荐引擎架构",
+    "s": "RecommenderEngine类+便捷函数双层API，RuleWeights权重配置(industry 35%/use_case 25%/complexity 20%/accessibility 15%)，Top-3推荐+用户偏好学习"
+  },
+  {
+    "p": "交互模式库设计",
+    "s": "InteractionPattern抽象基类，子类实现triggers/states/feedback/code_template，完整枚举体系(TriggerType/StateType/FeedbackType/ValidationRule)，模式注册表便于检索"
+  },
+  {
+    "p": "组件组合系统架构",
+    "s": "CompositionRule定义嵌套/互斥规则，LayoutGenerator生成布局代码，validate_composition验证合理性，PREDEFINED_PATTERNS提供10种常见组合模式快速复用"
+  },
+  {
+    "p": "行业模板设计规范",
+    "s": "每个行业模板包含：领域枚举(ChartType等)、数据结构类(MetricDefinition等)、模板类(含完整code_skeleton)、推荐主题，便于快速搭建行业应用"
+  },
+  {
+    "p": "UI Library Pro项目规模",
+    "s": "完整UI库包含：24155行代码、29个模块、25组件、15主题、10交互模式、20行业模板、React适配层、文档生成器、测试套件，15个Phase工作流完成"
+  },
+  {
+    "p": "UI设计多选型强制工作流",
+    "s": "设计UI前必须走5轮选型：1)风格(极简/水墨/科技/温馨/专业) 2)布局(分步向导/左右分栏/标签页/卡片网格/对话式) 3)交互(语音优先/鼠标点击/键盘快捷/手势滑动) 4)反馈(批注式/弹窗式/内联式/进度条式) 5)配色主题，每轮用AskUserQuestion提供选项，全部确认后存入design_concept再开始Phase0"
+  },
+  {
+    "p": "Brain审核修复策略",
+    "s": "审核时发现的问题分级处理：简单问题(语法错误/拼写/小改动)Brain直接修复不耗Worker token；复杂问题(逻辑重构/大段代码)生成指令交Worker执行。判断标准：修复是否超过10行代码"
+  },
+  {
+    "p": "Brain Phase推进完整流程",
+    "s": "审查通过后必须执行3步：1)更新project_state.json将当前Phase状态改为COMPLETED 2)运行python dealer_enhanced.py生成下一Phase指令 3)确认指令已复制到剪贴板。绝不能手动复制指令，必须通过Dealer自动生成"
+  },
+  {
+    "p": "Worker提示词添加中文输出要求和MCP工具指南",
+    "s": "在PROMPT.md文件开头添加语言要求章节强制中文输出，在权限部分后添加MCP工具使用表格和原则，更新状态报告格式为中文模板。关键位置：语言要求放在工作模式之后、MCP指南放在权限之后。"
+  },
+  {
+    "p": "Worker提示词添加中文输出要求和MCP工具指南",
+    "s": "在PROMPT.md文件开头添加语言要求章节强制中文输出，在权限部分后添加MCP工具使用表格和原则，更新状态报告格式为中文模板。关键位置：语言要求放在工作模式之后、MCP指南放在权限之后。"
+  }
+]

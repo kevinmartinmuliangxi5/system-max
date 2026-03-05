@@ -1,0 +1,10 @@
+{
+  "blueprint": [
+    {
+      "task_name": "--help - Phase 1: 核心功能实现",
+      "instruction": "--help",
+      "target_files": [],
+      "status": "PENDING"
+    }
+  ]
+}

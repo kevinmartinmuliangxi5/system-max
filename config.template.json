@@ -1,0 +1,6 @@
+{
+  "ZHIPU_API_KEY": "",
+  "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+  "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
+  "_comment": "Only needed for Worker mode. Leave empty if not using."
+}

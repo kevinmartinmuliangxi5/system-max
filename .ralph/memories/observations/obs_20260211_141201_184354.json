@@ -1,0 +1,14 @@
+{
+  "id": "obs_20260211_141201_184354",
+  "timestamp": "2026-02-11T14:12:01.184354",
+  "session_id": "sess_20260211_141201",
+  "observation": {
+    "type": "learning",
+    "content": "Callback URL配置需要HTTPS",
+    "context": {
+      "situation": "OAuth集成",
+      "outcome": "避免安全警告"
+    },
+    "importance": "medium"
+  }
+}
